@@ -7,8 +7,8 @@ ciphered = engine.cipher("hello world")
 # Дописать
 deciphered = engine.decipher(ciphered)
 
-engine.report("hello world!")
-engine1.report("hello world!")
+engine.report("my name is life!!!")
+engine1.report("my name is life!!!")
 
 engine.report("very good???")
 engine.key = 15
