@@ -3,12 +3,12 @@ from dMessageEngine import DMessageEngine as dme
 engine = dme(10)
 engine1 = dme(15)
 # ciphered присвоили результат шифрования методом cipher "hello world" (message) 
-ciphered = engine.cipher("hello world")
+#ciphered = engine.cipher("hello world")
 # Дописать
-deciphered = engine.decipher(ciphered)
+#deciphered = engine.decipher(ciphered)
 
-engine.report("my name is life!!!")
-engine1.report("my name is life!!!")
+engine.report("My name is life!!!")
+engine1.report("My name is life!!!")
 
 engine.report("very good???")
 engine.key = 15
