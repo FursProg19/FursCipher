@@ -21,7 +21,7 @@ def cipher(text, key):
 
 
 def decipher(text, key):
-    return "".join([transform(letter,-.key) for letter in text ])
+    return "".join([transform(letter,-key) for letter in text ])
 
 
 

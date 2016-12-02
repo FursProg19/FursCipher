@@ -7,8 +7,8 @@ engine1 = dme(15)
 # Дописать
 #deciphered = engine.decipher(ciphered)
 
-engine.report("My name is life!!!")
-engine1.report("My name is life!!!")
+engine.report("Меня зовут Лёня!")
+engine1.report("Меня зовут Лёня!")
 
 engine.report("very good???")
 engine.key = 15
