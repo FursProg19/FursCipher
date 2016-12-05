@@ -1,7 +1,6 @@
-alphabet_eng = [ letter for letter in range(ord('a'), ord('z') + 1)]
-alphabet_rus = [ letter for letter in range(ord('а'), ord('я') + 1)]
+alphabet_eng = [ chr (letter) for letter in range(ord('a'), ord('z') + 1)]
+alphabet_rus = [ chr (letter) for letter in range(ord('а'), ord('я') + 1)]
 alphabet_deu = ['a']+['ä']+[chr (l) for l in range(ord('b'), ord('o') + 1)]+['ö']+[chr(l) for l in range(ord('p'), ord('s') + 1)]+['ß','t','u','ü','v','w','x','y','z']
-alphabet_deu = [ord(letter) for letter in alphabet_deu]
 
 class DMessageEngine():
     #КОНСТРУКТОР КЛАССА
@@ -18,23 +17,18 @@ class DMessageEngine():
     
     def transform (self, letter, key):
         
-        selected_alphabet = []
-        low = letter.lower()
-        ord_letter = ord(low)
-                    
-        for alphabet in self.alphabets:
-            if ord_letter in alphabet:
-                selected_alphabet = alphabet
-                break
-        if selected_alphabet == []:
+        selected_alphabet = self.lenguages [self.lenguage]
+        isupper = letter.isupper()
+        low = letter.lower()           
+
+        if low not in selected_alphabet:
             return letter
         else:
-            first_letter = selected_alphabet[0]
-            if (ord_letter in selected_alphabet):
-                transleted = ((ord_letter + key - first_letter) % len(selected_alphabet))+first_letter
-                if isupper:
-                    return (chr(transleted)).upper()
-                return chr(transleted)                    
+            ord_letter = selected_alphabet.index(low)
+            transleted = ((ord_letter + key ) % len(selected_alphabet))
+            if isupper:
+                return selected_alphabet[transleted].upper()
+            return selected_alphabet[transleted]              
     def report(self,begining_message):
         ciphered = ((self.cipher(begining_message,)))
 

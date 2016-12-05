@@ -1,7 +1,7 @@
 from dMessageEngine import DMessageEngine as dme
 # Вызов конструктора класса DMessageEngine с параметром 10 (key)
-engine = dme(10,)
-engine1 = dme(15,)
+engine = dme(1, 'alphabet_deu')
+engine1 = dme(2,'alphabet_deu')
 # ciphered присвоили результат шифрования методом cipher "hello world" (message) 
 #ciphered = engine.cipher("hello world")
 # Дописать
