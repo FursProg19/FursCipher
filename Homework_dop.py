@@ -1,48 +1,40 @@
-class Cat:
-    def __init__ (self, height, weight, mass, fellCollor, eyesColor):
-        self.height = height
+class Animal:
+    def __init__ (self, weight , height, eyesColor):
         self.weight = weight
-        self.mass = mass
-        self.fellCollor = fellCollor
-        self.eyesColor = eyesColor
-    def run (self, time,speed):
-        return time*speed
-
-    def eat (self, food, howmany):
-        cost = 20
-        
-        return cost*food
-    
-    def sleep (self,time):
-        need= 12
-        return time-need
-    
-    def purr (self, laut):
-        return laut
-    
-    def brokenThings (self, thing)
-
-    print ('ковер,обои,салфетки,цветы')
-
-class Dog :
-    def __init__ (self, height, weight, mass, fellCollor, eyesColor):
         self.height = height
-        self.weight = weight
-        self.mass = mass
-        self.fellCollor = fellCollor
         self.eyesColor = eyesColor
-    def sleep (self, need):
-        return need
-    def ball (self, number, collor):
-        yield number
-        yield collor
-        
-    def walk (self, time):
-        return time
-    def bark (self, laut):
-        return laut
-    def security (self, size):
-        return size
+    def breath (self):
+        pass
+    def sleep (self):
+        pass
+    def vocalize (self, loudness):
+        print ('vocalizing with loudness {}'.format(loudness))
+
+class Pet (Animal):
+    def __init__(self, name, weight , height, eyesColor):
+        super().__init__(weight , height, eyesColor)
+        self.name = name
+    def breath (self):
+        print ('{} is breathing'.format(self.name))
+    def vocalize (self, loudness):
+        print ('my name is {}'.format(self.name))
+        super().vocalize(loudness)
+class Cat(Pet):
+    def __init__ (self, name, weight , height, eyesColor, tailLenght):
+        super().__init__(name, weight , height, eyesColor)
+        self.tailLenght = tailLenght
+    def vocalize (self, loudness):
+        super().vocalize(loudness)
+        print ('m{}{}w'.format('e'*loudness,'o'*loudness*2)) 
+    
+
+
+cat = Cat('sirko',5,0.75, 'Blue',0.20)
+cat.vocalize(10)
+
+
+
+
 
 
 
