@@ -1,13 +1,14 @@
-from dMessageEngine import DMessageEngine as dme
+from vigenere_engine import VigenereEngine
+from ceasarus_engine import CeasarusEngine
 # Вызов конструктора класса DMessageEngine с параметром 10 (key)
-engine = dme('dad', 'alphabet_eng', 'vigenere')
-engine1 = dme('dad','alphabet_eng', 'vigenere')
+engine = VigenereEngine('abc', 'en')
+engine1 = CeasarusEngine(9, 'de')
 # ciphered присвоили результат шифрования методом cipher "hello world" (message) 
 #ciphered = engine.cipher("hello world")
 # Дописать
 #deciphered = engine.decipher(ciphered)
 
-engine1.report("uber")
+engine1.report("öuber")
 engine.report("Ich heisse Leonid!!")
 
 engine.report("very good???")
