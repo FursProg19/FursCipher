@@ -7,21 +7,9 @@ class VigenereEngine(CeasarusEngine):
         self.cipher_word = cipher_word
         self.reset_key()
 
-   
-
-
-
-    def report(self,begining_message):
-        ciphered_message = ((self.cipher(begining_message)))
-        deciphered_message = (self.decipher(ciphered_message ))
-
-        
+    def report_key(self):
         print (('Используем ключ: {}').format(self.cipher_word))
-        print( 'Исходный текст: {}'.format(begining_message))
-        print(('После шифрования: {}').format(ciphered_message))
-        print(('После дешифрования: {}').format(deciphered_message))
-
-
+      
     def reset_key(self):
         self.current_index = 0
         self.key = self.to_key(self.cipher_word[self.current_index])
@@ -44,6 +32,7 @@ class VigenereEngine(CeasarusEngine):
         result = super().decipher(message)
         self.reset_key()
         return result
+
     def transform_ceasarus (self, key , letter):
         result = super().transform_ceasarus (key, letter)
         self.set_next_key()

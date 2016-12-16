@@ -10,13 +10,14 @@ class DMessageEngine():
                             'de': alphabet_deu}   
         
         self.language = language
-
+    
+    def report_key(self):
+        print (('Используем ключ: {}').format(self.key))
+    
     def report(self,begining_message):
         ciphered_message = ((self.cipher(begining_message)))
         deciphered_message = (self.decipher(ciphered_message ))
-
-        
-        print (('Используем ключ: {}').format(self.key))
+        self.report_key()
         print( 'Исходный текст: {}'.format(begining_message))
         print(('После шифрования: {}').format(ciphered_message))
         print(('После дешифрования: {}').format(deciphered_message))
