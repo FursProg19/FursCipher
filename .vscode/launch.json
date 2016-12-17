@@ -9,6 +9,9 @@
             "pythonPath": "${config.python.pythonPath}",
             "program": "${cwd}/main.py",
             "cwd": "${workspaceRoot}",
+            "args": [
+                "1234"
+            ],
             "debugOptions": [
                 "WaitOnAbnormalExit",
                 "WaitOnNormalExit",

@@ -8,7 +8,7 @@ class VigenereEngine(CeasarusEngine):
         self.reset_key()
 
     def report_key(self):
-        print (('Используем ключ: {}').format(self.cipher_word))
+        return (('Используем ключ: {}').format(self.cipher_word))
       
     def reset_key(self):
         self.current_index = 0
